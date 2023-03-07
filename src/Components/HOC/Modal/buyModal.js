@@ -11,7 +11,7 @@ const BuyModal = ({cancel, name, description, address, opensea_link}) => {
             <div>
               <h3>{name}</h3>
             </div>
-            <div onClick={() => cancel()}>
+            <div data-testid='closeMe' onClick={() => cancel()}>
               <CircleCancel />
             </div>
           </div>
@@ -21,6 +21,7 @@ const BuyModal = ({cancel, name, description, address, opensea_link}) => {
             <h4>Address</h4>
             <p>{address}</p>
             <button
+              data-testid='redirectMe'
               onClick={() =>
                 window.open(`${opensea_link}`, '_blank', 'noreferrer')
               }

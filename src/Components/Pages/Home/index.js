@@ -3,9 +3,9 @@ import TokenCard from '../../HOC/Card';
 import {dummyToken} from '../../Utitlities/dummyToken';
 import BuyModal from '../../HOC/Modal/buyModal';
 import {useState} from 'react';
-const Home = ({userName = '', searchValue = '', listItem = []}) => {
-  const [openModal, setOpenModal] = useState(false);
-  const [activeModal, setActiveModal] = useState(null);
+const Home = ({openmodal = false, activemodal = null}) => {
+  const [openModal, setOpenModal] = useState(openmodal);
+  const [activeModal, setActiveModal] = useState(activemodal);
 
   return (
     <>
